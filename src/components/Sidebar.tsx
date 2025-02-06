@@ -2,12 +2,8 @@ import Link from "next/link";
 
 const navItems = [
   { name: "Dashboard", href: "/" },
-  { name: "Orders", href: "/orders" },
   { name: "Products", href: "/products" },
   { name: "Add Product", href: "/products/add" },
-  { name: "Customers", href: "/customers" },
-  { name: "Analytics", href: "/analytics" },
-  { name: "Settings", href: "/settings" },
 ];
 
 export function Sidebar() {
