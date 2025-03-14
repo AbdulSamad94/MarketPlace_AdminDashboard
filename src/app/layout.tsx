@@ -15,12 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="flex min-h-screen flex-col md:flex-row bg-gray-100 dark:bg-gray-900">
         <Sidebar />
-        <Header />
-        <main>{children}</main>
-        <Toaster />
+        <div className="flex-1 flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-1 w-full">{children}</main>
+        </div>
+        <Toaster position="top-right" />
       </body>
     </html>
   );

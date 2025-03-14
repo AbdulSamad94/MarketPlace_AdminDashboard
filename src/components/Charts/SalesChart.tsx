@@ -28,7 +28,7 @@ const data = [
 ];
 
 const SalesChart: React.FC = () => (
-  <div className="bg-white shadow-md rounded-lg p-4 mb-8">
+  <div className="bg-white shadow-md rounded-lg p-4 mb-8 text-black">
     <h3 className="text-lg font-semibold mb-4">Monthly Sales</h3>
     <ResponsiveContainer width="100%" height={300}>
       <LineChart data={data}>

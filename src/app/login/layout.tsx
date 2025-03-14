@@ -11,10 +11,10 @@ export default function LoginLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body>
+    <html lang="en">
+      <body className="bg-gradient-to-r from-blue-50 to-blue-100">
         <main>{children}</main>
       </body>
     </html>
-  ); // No sidebar, header, or extra HTML structure
+  );
 }

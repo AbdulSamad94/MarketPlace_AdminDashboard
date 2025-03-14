@@ -3,24 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  Menu,
-  X,
-  Home,
-  Package,
-  Plus,
-  Users,
-  Settings,
-  LogOut,
-} from "lucide-react";
+import { Menu, X, Home, Package, Plus, LogOut } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const navItems = [
   { name: "Dashboard", href: "/", icon: <Home size={20} /> },
   { name: "Products", href: "/products", icon: <Package size={20} /> },
   { name: "Add Product", href: "/products/add", icon: <Plus size={20} /> },
-  { name: "Customers", href: "/customers", icon: <Users size={20} /> },
-  { name: "Settings", href: "/settings", icon: <Settings size={20} /> },
 ];
 
 export function Sidebar() {
@@ -109,7 +98,7 @@ export function Sidebar() {
           </ul>
         </nav>
 
-        <div className="absolute bottom-0 left-0 right-0 p-4">
+        <div className="absolute md:-bottom-20 left-0 right-0 p-4">
           <button
             onClick={handleLogout}
             className="flex items-center w-full px-4 py-2 text-sm font-medium text-red-500 hover:bg-red-100 rounded-md transition-colors"
