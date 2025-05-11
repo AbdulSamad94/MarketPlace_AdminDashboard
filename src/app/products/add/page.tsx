@@ -142,7 +142,6 @@ const AddProductPage = () => {
             />
             <p className="text-sm text-gray-500">Max 50 characters</p>
           </div>
-
           {/* Slug */}
           <div>
             <Label htmlFor="slug">Slug (URL)</Label>
@@ -157,7 +156,6 @@ const AddProductPage = () => {
             />
             <p className="text-sm text-gray-500">Auto-generated from name</p>
           </div>
-
           {/* Description */}
           <div>
             <Label htmlFor="description">Description</Label>
@@ -171,7 +169,6 @@ const AddProductPage = () => {
             />
             <p className="text-sm text-gray-500">Max 200 characters</p>
           </div>
-
           {/* Price */}
           <div>
             <Label htmlFor="price">Price</Label>
@@ -186,7 +183,6 @@ const AddProductPage = () => {
               required
             />
           </div>
-
           {/* Discount Percent */}
           <div>
             <Label htmlFor="discountPercent">Discount Percent</Label>
@@ -201,7 +197,6 @@ const AddProductPage = () => {
               required
             />
           </div>
-
           {/* Tags */}
           <div>
             <Label htmlFor="tags">Tags (comma separated)</Label>
@@ -214,7 +209,6 @@ const AddProductPage = () => {
               placeholder="e.g. summer, casual, new"
             />
           </div>
-
           {/* Sizes */}
           <div>
             <Label htmlFor="sizes">Sizes (comma separated)</Label>
@@ -228,7 +222,6 @@ const AddProductPage = () => {
               required
             />
           </div>
-
           {/* Colors */}
           <div>
             <Label htmlFor="colors">Colors (comma separated hex codes)</Label>
@@ -242,7 +235,6 @@ const AddProductPage = () => {
               required
             />
           </div>
-
           {/* Is New */}
           <div className="flex items-center space-x-2">
             <Checkbox
@@ -251,8 +243,7 @@ const AddProductPage = () => {
               onCheckedChange={handleCheckboxChange}
             />
             <Label htmlFor="isNew">Mark as New Arrival</Label>
-          </div>
-
+          </div>{" "}
           {/* Submit */}
           <div className="text-center">
             <Button
