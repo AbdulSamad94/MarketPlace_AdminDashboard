@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { TextField } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 import { AlertCircle, CheckCircle } from "lucide-react";
 
@@ -81,7 +80,7 @@ const LoginPage: React.FC = () => {
   }, [username, password]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-blue-100">
+    <div className="flex items-center justify-center min-h-screen">
       <div className="bg-white shadow-2xl rounded-lg p-8 max-w-md w-full mx-4">
         {redirecting ? (
           <div className="flex flex-col items-center py-8">
@@ -102,34 +101,59 @@ const LoginPage: React.FC = () => {
 
             <form onSubmit={handleLogin} className="space-y-6">
               <div>
-                <TextField
-                  label="Username"
-                  variant="outlined"
-                  fullWidth
+                <label
+                  htmlFor="username"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Username
+                </label>
+                <input
+                  id="username"
+                  type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  error={!!formErrors.username}
-                  helperText={formErrors.username}
-                  inputProps={{ "data-testid": "username-input" }}
+                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                    formErrors.username ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="Enter your username"
+                  data-testid="username-input"
                 />
+                {formErrors.username && (
+                  <p className="mt-1 text-sm text-red-500">
+                    {formErrors.username}
+                  </p>
+                )}
               </div>
+
               <div>
-                <TextField
-                  label="Password"
+                <label
+                  htmlFor="password"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Password
+                </label>
+                <input
+                  id="password"
                   type="password"
-                  variant="outlined"
-                  fullWidth
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  error={!!formErrors.password}
-                  helperText={formErrors.password}
-                  inputProps={{ "data-testid": "password-input" }}
+                  className={`w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+                    formErrors.password ? "border-red-500" : "border-gray-300"
+                  }`}
+                  placeholder="Enter your password"
+                  data-testid="password-input"
                 />
+                {formErrors.password && (
+                  <p className="mt-1 text-sm text-red-500">
+                    {formErrors.password}
+                  </p>
+                )}
               </div>
+
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-md font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-md font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 disabled:opacity-70 disabled:cursor-not-allowed"
                 data-testid="login-button"
               >
                 {loading ? (

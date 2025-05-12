@@ -46,7 +46,6 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Mobile menu button */}
       {isMobile && (
         <button
           onClick={toggleSidebar}
