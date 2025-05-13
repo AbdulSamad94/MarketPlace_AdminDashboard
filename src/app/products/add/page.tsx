@@ -245,7 +245,7 @@ const AddProductPage = () => {
             <Label htmlFor="isNew">Mark as New Arrival</Label>
           </div>{" "}
           {/* Submit */}
-          <div className="text-center">
+          <div className="text-center mt-6">
             <Button
               type="submit"
               className="bg-green-600 hover:bg-green-700 text-white px-6 py-2"
