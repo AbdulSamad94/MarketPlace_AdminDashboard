@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Admin Login",
+  title: "Admin Login Page",
   description: "Login to the admin panel",
 };
 
