@@ -3,6 +3,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
     const { username, password } = await request.json();
 
+
     if (username === 'user' && password === 'password') {
         const token = 'example-token';
         const response = NextResponse.json({ success: true, token: token });
