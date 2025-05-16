@@ -8,6 +8,7 @@ export async function POST(request: Request) {
         const token = 'example-token';
         const response = NextResponse.json({ success: true, token: token });
 
+
         response.cookies.set('new-token', token, { path: '/', httpOnly: true });
 
         return response;
